@@ -280,8 +280,9 @@ runs:
           }
           fi
           echo -e "\`\`\`" >> .coverage-output.final
-          cat .coverage-output >> .coverage-output.final
-          echo -e "\n\`\`\`\n" >> .coverage-output.final
+          # Hide full coverage from report
+          # cat .coverage-output >> .coverage-output.final
+          # echo -e "\n\`\`\`\n" >> .coverage-output.final
           if [[ "${{ inputs.togglable-report }}" == "true" ]]
           then {
             echo -e "</details>\n\n" >> .coverage-output.final
